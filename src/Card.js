@@ -11,7 +11,7 @@ const Card = ({
   footer,
   maxHeight = "auto",
   padding = "p-4",
-  thumbnailShape = "rounded-full", // 'circle', 'rounded', 'square'
+  thumbnailShape = "rounded-none", // 'circle', 'rounded', 'square'
   thumbnailSize = "w-32 h-32",
 }) => {
   // Define the class for thumbnail shape based on props
@@ -27,12 +27,12 @@ const Card = ({
   return (
     <div
       className={`flex bg-card shadow-md rounded-lg overflow-hidden ${padding}`}
-      style={{ maxHeight }}
+      style={{ maxHeight, width: "100%", boxSizing: "border-box" }} // Ensure full width and include padding
     >
       {/* Thumbnail */}
       {thumbnail && (
         <div className="flex-shrink-0 flex items-center justify-center">
-          <a href={thumbnailUrl || "#"} className="flex-shrink-0">
+          <a href={thumbnailUrl} className="flex-shrink-0">
             <img src={thumbnail} alt={title} className={thumbnailClass} />
           </a>
         </div>
@@ -42,9 +42,9 @@ const Card = ({
       <div className="flex flex-col justify-center flex-grow ml-4">
         {/* Title */}
         {title && (
-          <h2 className="text-2xl font-bold mb-2">
+          <h2 className="text-2xl font-bold mb-2 text-primary">
             {titleUrl ? (
-              <a href={titleUrl} className="hover:underline text-primary">
+              <a href={titleUrl}>
                 {title}
               </a>
             ) : (

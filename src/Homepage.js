@@ -15,15 +15,13 @@ function Homepage() {
   }, []);
 
   return (
-    <div className="flex-grow flex items-center justify-center">
+    <div ref={textRef} className="flex-grow flex items-center justify-center">
       <Card
-        thumbnail="https://via.placeholder.com/150"
-        title="Card Title"
-        titleUrl="https://example.com"
-        description="This is a description of the card. It provides more details about the content."
-        footer="this is some text"
+        thumbnail="https://avatars.githubusercontent.com/u/90649313?v=4"
         thumbnailShape="circle"
-        thumbnailSize="w-24 h-24"
+        title="Welcome!"
+        description="Welcome to my very empty website!"
+        footer="Expect more soon!"
       />
     </div>
   );
