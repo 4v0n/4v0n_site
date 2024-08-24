@@ -12,6 +12,7 @@ module.exports = {
         card: "#28292e",
         button: "#3f4044",
         buttonspecial: "#9df0c9",
+        footer: "#8c8c8f",
       },
     },
   },
