@@ -1,8 +1,24 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import Navbar from "./Navbar";
+import Homepage from "./Homepage";
+import Aboutpage from "./Aboutpage";
+import Projectspage from "./Projectspage";
+import Contactpage from "./Contactpage";
+
 function App() {
   return (
-    <div className="App">
-      Blank page
-    </div>
+    <Router>
+      <div className="text-white bg-background min-h-screen flex flex-col">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/about" element={<Aboutpage />} />
+          <Route path="/projects" element={<Projectspage />} />
+          <Route path="/contact" element={<Contactpage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
