@@ -21,7 +21,7 @@ function Navbar() {
               <Link to="/projects" className="text-white hover:underline">Projects</Link>
             </li>
             <li>
-              <Link to="/contact" className="text-white hover:underline">Contact</Link>
+              <Link to="/social" className="text-white hover:underline">Social</Link>
             </li>
           </ul>
         </div>

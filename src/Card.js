@@ -26,13 +26,13 @@ const Card = ({
 
   return (
     <div
-      className={`flex bg-card shadow-md rounded-lg overflow-hidden ${padding}`}
+      className={`flex bg-card shadow-lg rounded-lg overflow-hidden ${padding}`}
       style={{ maxHeight, width: "100%", boxSizing: "border-box" }} // Ensure full width and include padding
     >
       {/* Thumbnail */}
       {thumbnail && (
         <div className="flex-shrink-0 flex items-center justify-center">
-          <a href={thumbnailUrl} className="flex-shrink-0">
+          <a href={thumbnailUrl} className="flex-shrink-0" target="_blank">
             <img src={thumbnail} alt={title} className={thumbnailClass} />
           </a>
         </div>
@@ -44,7 +44,7 @@ const Card = ({
         {title && (
           <h2 className="text-2xl font-bold mb-2 text-primary">
             {titleUrl ? (
-              <a href={titleUrl}>
+              <a href={titleUrl} target="_blank">
                 {title}
               </a>
             ) : (
